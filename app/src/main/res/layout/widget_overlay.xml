@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Draggable Circle -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/widgetCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        android:backgroundTint="@color/primary"
+        android:contentDescription="Macro Widget"/>
+
+    <!-- Drag Handle (invisible, covers circle) -->
+    <View
+        android:id="@+id/dragHandle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"/>
+
+    <!-- Expanded Panel -->
+    <LinearLayout
+        android:id="@+id/expandPanel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="#EE1E90FF"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnToggle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="BAŞLAT"
+            android:backgroundTint="@color/btn_start"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="+ NOKTA EKLE"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <Button
+            android:id="@+id/btnAddSingle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="+ TEK TIKLA"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <ToggleButton
+            android:id="@+id/btnHold"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="HOLD: KAPALI"
+            android:textOn="HOLD: AÇIK"
+            android:textOff="HOLD: KAPALI"
+            android:backgroundTint="@color/primary_dark"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"/>
+
+        <Button
+            android:id="@+id/btnClearSlots"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="NOKTALARI TEMİZLE"
+            android:backgroundTint="#FF4444"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
