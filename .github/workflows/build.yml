@@ -18,6 +18,7 @@ jobs:
         run: |
           mkdir -p /tmp/wrapper-gen
           cd /tmp/wrapper-gen
+          touch settings.gradle
           gradle wrapper --gradle-version 8.0
           cp -r gradle "$GITHUB_WORKSPACE"/
           cp gradlew "$GITHUB_WORKSPACE"/
